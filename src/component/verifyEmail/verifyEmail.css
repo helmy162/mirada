@@ -1,0 +1,121 @@
+  .sub-title{
+    color:var(--color-grey);
+    margin:2rem auto;
+  }
+  .sub-title span{
+    color:#2e2e3a;
+    text-decoration:underline;
+    font-weight:900;
+  }
+
+  .timer{
+    color:#94949b;
+    margin:2rem auto 1.5rem auto;
+    font-family: Calibre-Light;
+    font-size: 22px;
+  }
+  
+  .timer span{
+    font-weight:900;
+    text-decoration:underline;
+    font-family: Calibre-Medium;
+    font-size: 22px;
+
+  }
+
+.code-group{
+  display:flex;
+  flex-direction:row;
+  gap:1.4rem;
+
+}
+.code-input{
+  color:#3b3b4e;
+  font-weight:900;
+  font-size:2rem;
+}
+
+.popup-medium-message{
+  font-family: 'Calibre-Medium';
+  font-size: 28px;
+  text-align: center;
+  color: #3b3b4e;
+}
+
+.popup-message{
+  font-size: 22px;
+}
+
+.box{
+  min-height: 55vh;
+}
+
+.otp-form{
+  height: 100px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.otp-form input{
+  font-family: 'Calibre-Bold';
+  font-size: 28px !important;
+  width: 160px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: black;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+/* MEDIA QUERIES  Small */
+
+@media screen and (min-width: 1920px){
+  .timer{
+    color:#94949b;
+    margin:1.6666666666666667vw auto 1.25vw auto;
+    font-family: Calibre-Light;
+    font-size: 1.1458333333333333vw;
+  }
+  
+  .timer span{
+    font-weight:900;
+    text-decoration:underline;
+    font-family: Calibre-Medium;
+    font-size: 1.1458333333333333vw;
+  }
+
+  .popup-medium-message{
+    font-family: 'Calibre-Medium';
+    font-size: 1.4583333333333333vw;
+    text-align: center;
+    color: #3b3b4e;
+  }
+  .popup-message{
+    font-size: 1.1458333333333333vw;
+  }
+  
+.otp-form{
+  height: 5.208333333333334vw;
+  margin-bottom: 3.6458333333333335vw;
+}
+
+.otp-form input{
+  font-size: 1.4583333333333333vw !important;
+  width: 8.333333333333332vw;
+  height: 5.208333333333334vw;
+  border-radius: 0.5208333333333333vw;
+  border: 0.052083333333333336vw solid #ccc;
+  margin-right: 0.5208333333333333vw;
+}
+
+  
+}
+  

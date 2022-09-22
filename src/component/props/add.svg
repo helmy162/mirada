@@ -1,0 +1,7 @@
+<svg data-name="add-circle/linear" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+    <g data-name="vuesax/linear/add-circle">
+        <path d="M9.5 19A9.5 9.5 0 1 0 0 9.5 9.528 9.528 0 0 0 9.5 19z" transform="translate(2 2)" style="stroke:#0087c7;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;fill:none"/>
+        <path data-name="Vector" d="M0 0h8" transform="translate(7.5 11.5)" style="stroke:#0087c7;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;fill:none"/>
+        <path data-name="Vector" d="M0 8V0" transform="translate(11.5 7.5)" style="stroke:#0087c7;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;fill:none"/>
+    </g>
+</svg>
