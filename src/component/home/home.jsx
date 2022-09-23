@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 // import { Link, useHistory } from "react-router-dom";
 import { HiOutlineClock } from "react-icons/hi";
-import "./signin.css";
+import "./home.css";
 import logo from "../props/logo.svg";
 import service from "../props/service.svg";
 import clock from "../props/clock.svg";
 
-const Signin = () => {
+const Home = () => {
   // call useHistory for routing
   
   return (
@@ -24,4 +24,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Home;

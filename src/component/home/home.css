@@ -4,6 +4,10 @@
   font-family: Cairo;
   src: url("../fonts/Cairo-Regular.ttf") format("opentype");
 }
+@font-face {
+  font-family: DM Sans;
+  src: url("../fonts/DMSans-Regular.ttf") format("opentype");
+}
 
 
 .welcome{

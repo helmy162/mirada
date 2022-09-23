@@ -1,14 +1,17 @@
-import React from "react";
-import './popup.css';
-import close from '../props/close.png';
- 
-const Popup = (props: { noclose:Boolean ; handleClose: React.MouseEventHandler<HTMLSpanElement> | undefined; content: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
+import React, { useState, useRef } from 'react'
+import Drawer from "react-bottom-drawer";
+
+
+const Popup = (props: {content: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const onClose = React.useCallback(() => {
+    setIsVisible(false);
+  }, []);
   return (
     <div className="popup-box">
-      <div className="box">
-        <span className="close-icon" onClick={props.handleClose} style={props.noclose? {visibility:'hidden'}: {visibility:'visible'}}> <img src={close} alt="x" className="popup-x"/></span>
+      <Drawer isVisible={isVisible} onClose={onClose}>
         {props.content}
-      </div>
+      </Drawer>
     </div>
   );
 };

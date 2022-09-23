@@ -1,0 +1,132 @@
+.services{
+    max-width: 375px;
+    display: grid;
+    
+    grid-template-columns: 155px 155px ;
+    gap: 16px;
+}
+.service{
+    /* flex: 0 0 50%; */
+    width: 155px;
+    height: 155px;
+    border: 1px solid #814486;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.service-name{
+    font-family: 'Cairo';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #814486;
+    margin-top: 16px;
+    padding: 12px;
+    padding-bottom: 4px;
+    padding-top: 0px;
+}
+.activated{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: center;
+    color: #EB5757;
+    visibility: visible;
+}
+.drawer{
+    min-height: 531px;
+}
+.drawer__content{
+    min-height: 531px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.drawer0{
+    padding: 0px 10%;
+    text-align: center;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #666666;   
+}
+.timepicker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 16px ;
+}
+.timepicker input{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+}
+.time{
+    width: 80px;
+    height: 65px;
+    border: 1px solid #CCCCCC;
+    border-radius: 16px;
+    color: #666666;   
+}
+
+.react-switch-bg div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #666666;
+}
+.react-switch-bg div:nth-child(1){
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #fff;
+}
+
+.react-switch-handle div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #666666;
+}
+.react-switch-handle div:nth-child(1){
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #fff;
+}
