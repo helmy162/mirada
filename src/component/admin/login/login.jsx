@@ -26,7 +26,7 @@ const Login = () => {
                 <input type="password" name="password" id="password" className="form-input" />
             </div>
             <div className="form-group">
-                <button type="submit" className="btn-login" >Login</button>
+                <Link to="/dashboard"  type="submit" className="btn-login" >Login</Link>
             </div>
             <div className="forgot">
                 <Link style={{textDecoration:'none'}}> Forgot your password? </Link>

@@ -30,7 +30,7 @@ const Pages = () => {
         <Route path="/services">
           <Services/>
         </Route>
-        <Route path="/admin">
+        <Route path="/login">
           <Login/>
         </Route>
         <Route path="/dashboard">
@@ -42,7 +42,7 @@ const Pages = () => {
         <Route path="/roomsetup">
           <Rooms/>
         </Route>
-        <Redirect to="/home" />
+        <Redirect to="/login" />
       </Switch>
     </>
   );

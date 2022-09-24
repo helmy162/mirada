@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://miradahotel.waiqweb.com",
+  "homepage": "http://admin.miradahotel.waiqweb.com",
   "private": true,
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
