@@ -8,6 +8,7 @@ import {
 import Home from "./component/home/home";
 import Services from "./component/services/services";
 import { useEffect } from "react";
+import Requests from "./component/requests/requests";
 
 const Pages = () => {
   const location = useLocation();
@@ -17,6 +18,9 @@ const Pages = () => {
       <Switch>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/reqeusts">
+          <Requests />
         </Route>
         <Route path="/services">
           <Services/>

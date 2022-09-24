@@ -9,11 +9,11 @@ import laundry from "../props/laundry.svg";
 import roomservice from "../props/roomservice.svg";
 import wakeup from "../props/wakeup.svg";
 import wifi from "../props/wifi.svg";
-import AM from "../props/AM.svg";
-import PM from "../props/PM.svg";
 import Drawer from "react-bottom-drawer";
 import Switch from "react-switch";
-
+import TimePopup from "../popup-time/popup-time";
+import FeedbackPopup from "../popup-feedback/popup-feedback";
+import PhonePopup from "../popup-phone/popup-phone";
 
 const Services = () => {
   // call useHistory for routing
@@ -76,12 +76,22 @@ const Services = () => {
     },
   ]);
   const [isVisible, setIsVisible] = useState([false, false, false, false, false, false, false, false]);
-  const [isChecked, setisChecked] = useState(false);
+  
+  const [firstPopup, setFirstPopup] = useState(-1);
+  const [secondPopup, setSecondPopup] = useState(-1);
 
   const openDrawer = index => e => {
     let newArr = [...isVisible];
     newArr[index] = true;
     setIsVisible(newArr);
+    if(services[index].status === "inactive"){
+        setFirstPopup(index);
+        setSecondPopup(-1);
+    }
+    else{
+        setFirstPopup(-1);
+        setSecondPopup(index);
+    }
   }
 
   const closeDrawer = index => e => {
@@ -101,36 +111,31 @@ const Services = () => {
                 <div className="service-name">{service.name}</div>
             </button>
             ))}
-        </div> 
-        {/* <Drawer
-        duration={250}
-        hideScrollbars={true}
-        onClose={closeDrawer(0)}
-        isVisible={isVisible[0]}
-        className="drawer"
-        >
+        </div>
+        
+        { firstPopup >= 0 ?
+            <PhonePopup onClose={closeDrawer(firstPopup)}
+            isVisible={isVisible[firstPopup]}> </PhonePopup>
+            :
+            null
+        }
+
+        { secondPopup >= 0 ?
+          <Drawer
+          duration={250}
+          hideScrollbars={true}
+          onClose={closeDrawer(secondPopup)}
+          isVisible={isVisible[secondPopup]}
+          className="drawer"
+          >
             <div className="drawer0">
             The service has already been requested, you can check the status of the request on <Link to='/home' style={{textDecoration:'none'}}> my request page </Link>
             </div>
-        </Drawer> */}
-        <Drawer
-        duration={250}
-        hideScrollbars={true}
-        onClose={closeDrawer(0)}
-        isVisible={isVisible[0]}
-        className="drawer"
-        >
-            <span style={{marginBottom:'33px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666'}}>Please select a time</span>
-            <div className="timepicker">
-                <input type="text" className="time" placeholder="1"/>
-                :
-                <input type="text" className="time" placeholder="00"/>
-            </div>
-            <Switch onChange={() => setisChecked(!isChecked)} checked={isChecked} borderRadius={8} height={45} width={104} offColor="#F2F2F2" onColor="#814486" offHandleColor='#814486' onHandleColor="#F2F2F2" checkedIcon='AM' uncheckedIcon='PM' checkedHandleIcon='PM' uncheckedHandleIcon='AM' handleDiameter={45}/>
-            <textarea   placeholder="Add comment" rows="4" cols="50" style={{width:'90%', height:'82px',marginTop:'16px', background:'#F2F2F2', borderRadius:'16px', border:'none', padding:'16px', fontFamily:'Cairo', fontSize:'16px', marginBottom:'16px'}} />
-            <button style={{backgroundColor: 'transparent', borderRadius:'999px', width: '235px', height: '60px', border: '1px solid #814486', color: '#814486', fontFamily:'Cairo', fontSize:'16px', display:'flex', justifyContent:'center', alignItems: 'center'}}>
-             Request service</button>
-        </Drawer>   
+          </Drawer>
+        :
+        null
+        }
+        
     </div>
   );
 };
