@@ -13,12 +13,12 @@ const Success = (props) => {
     hideScrollbars={true}
     onClose={props.onClose}
     isVisible={props.isVisible}
-    className="table-drawer"
+    className="table-drawer2"
     >
         <div className="closex"> <button onClick={props.onClose} style={{background:'transparent', border:'none'}}><img src={x} alt="x" /></button></div>
         <img src={tick} alt="tick" className="tick"/>
         <span style={{marginTop:'32px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666', padding:'0px 39px', textAlign:'center'}}>Thanks for your request.
-            Your request for {props.name} was successfully booked.
+            {props.message}
         </span>
     </Drawer>
   );
