@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mirada/static/css/main.21f30898.css",
-    "main.js": "/mirada/static/js/main.fbbe9e6f.js",
+    "main.js": "/mirada/static/js/main.a4fc8bb6.js",
     "static/js/787.28cb0dcd.chunk.js": "/mirada/static/js/787.28cb0dcd.chunk.js",
     "static/media/Cairo-Regular.ttf": "/mirada/static/media/Cairo-Regular.0dbc695157a638d7cfe1.ttf",
     "static/media/DMSans-Regular.ttf": "/mirada/static/media/DMSans-Regular.4ee96395e07a04577aab.ttf",
@@ -26,11 +26,11 @@
     "static/media/x.svg": "/mirada/static/media/x.99f3eabca5dd3a7ccf1b0d2960fa732d.svg",
     "static/media/clock.svg": "/mirada/static/media/clock.6abf2ca6b426c59655202c2c12aeb412.svg",
     "main.21f30898.css.map": "/mirada/static/css/main.21f30898.css.map",
-    "main.fbbe9e6f.js.map": "/mirada/static/js/main.fbbe9e6f.js.map",
+    "main.a4fc8bb6.js.map": "/mirada/static/js/main.a4fc8bb6.js.map",
     "787.28cb0dcd.chunk.js.map": "/mirada/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21f30898.css",
-    "static/js/main.fbbe9e6f.js"
+    "static/js/main.a4fc8bb6.js"
   ]
 }
