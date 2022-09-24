@@ -25,7 +25,7 @@ const TimePopup = (props) => {
           :
           <input type="text" className="time" placeholder="00"/>
       </div>
-      <Switch onChange={() => setisChecked(!isChecked)} checked={isChecked} borderRadius={8} height={45} width={104} offColor="#F2F2F2" onColor="#814486" offHandleColor='#814486' onHandleColor="#F2F2F2" checkedIcon='AM' uncheckedIcon='PM' checkedHandleIcon='PM' uncheckedHandleIcon='AM' handleDiameter={45}/>
+      <Switch onChange={() => setisChecked(!isChecked)} checked={isChecked} borderRadius={8} height={45} width={104} offColor="#F2F2F2" onColor="#F2F2F2" offHandleColor='#814486' onHandleColor="#814486" checkedIcon={<div style={{color:'#666666'}}>AM</div>} uncheckedIcon={<div style={{color:'#666666'}}>PM</div>} checkedHandleIcon={<div style={{color:'white'}}>PM</div>} uncheckedHandleIcon='AM' handleDiameter={45}/>
       <textarea   placeholder="Add comment" rows="4" cols="50" style={{width:'90%', height:'82px',marginTop:'16px', background:'#F2F2F2', borderRadius:'16px', border:'none', padding:'16px', fontFamily:'Cairo', fontSize:'16px', marginBottom:'16px'}} />
       <button onClick={()=> setIsVisible(true)} style={{backgroundColor: 'transparent', borderRadius:'999px', width: '235px', height: '60px', border: '1px solid #814486', color: '#814486', fontFamily:'Cairo', fontSize:'16px', display:'flex', justifyContent:'center', alignItems: 'center'}}>
       Request service</button>
