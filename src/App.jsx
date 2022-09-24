@@ -9,6 +9,11 @@ import Home from "./component/home/home";
 import Services from "./component/services/services";
 import { useEffect } from "react";
 import Requests from "./component/requests/requests";
+import Login from "./component/admin/login/login";
+import Dashboard from "./component/admin/dashboard/dashboard";
+import Report from "./component/admin/report/report";
+import roomTable from "./component/admin/roomTable/roomTable";
+import Rooms from "./component/admin/rooms/rooms";
 
 const Pages = () => {
   const location = useLocation();
@@ -24,6 +29,18 @@ const Pages = () => {
         </Route>
         <Route path="/services">
           <Services/>
+        </Route>
+        <Route path="/admin">
+          <Login/>
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard/>
+        </Route>
+        <Route path="/report">
+          <Report/>
+        </Route>
+        <Route path="/roomsetup">
+          <Rooms/>
         </Route>
         <Redirect to="/home" />
       </Switch>

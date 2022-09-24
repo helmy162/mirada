@@ -18,8 +18,9 @@ import DetailsPopup from "../popup-details/popup-details";
 import DnDPopup from "../popup-dnd/popup-dnd";
 import Header from "../header/header";
 
-const Services = () => {
+const Services = (props) => {
   // call useHistory for routing
+
   const [services, setServices] = useState([
     {
       id: 1,
@@ -106,7 +107,7 @@ const Services = () => {
   
   return (
     <>
-      <Header></Header>
+      {props.nav?<Header></Header>: null}
       <div className="Wrapper">
           <span style={{marginBottom:'33px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666'}}>Please Make your request</span>
           <div className="services">

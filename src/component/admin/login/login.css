@@ -1,0 +1,53 @@
+.forgot{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #666666;
+    text-align: center;
+}
+.label{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #814486;
+    margin-bottom: 10px;
+}
+.btn-login{
+    background-color: rgb(129, 68, 134);
+    border-radius: 999px;
+    width: 380px;
+    height: 60px;
+    border: none;
+    margin-bottom: 16px;
+    color: white;
+    font-family: Cairo;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.form-input{
+    background-color: white;
+    border-radius: 999px;
+    width: 330px;
+    max-width: 380px;
+    height: 36px;
+    border: 1px solid rgb(189, 189, 189);
+    margin-bottom: 16px;
+    color: rgb(129, 68, 134);
+    font-family: Cairo;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+}
+.form-input:focus, .form-input:active, .form-input:focus-visible{
+    border: 1px solid #814486;
+    outline: none;
+}

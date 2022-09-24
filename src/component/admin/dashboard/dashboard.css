@@ -1,0 +1,120 @@
+.container{
+    background: #1A0E1B;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100vw;
+}
+.dashboard th:nth-child(1){
+    border-radius: 16px 0px 0px 0px;
+}
+.dashboard th:nth-child(6){
+    border-radius: 0px 16px 0px 0px;
+}
+.dashboard tr:nth-child(1){
+    height: 55px;
+}
+.dashboard tr{
+    height: 28px;
+}
+.dashboard td{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #666666;
+    max-height: 20px;
+}
+.dashboard td:nth-child(1){
+    color:#111111;
+}
+.dashboard tr:nth-child(2n){
+    background-color:#fff ;
+}
+.dashboard tr:nth-child(2n+1){
+    background-color:#F0F0F0 ;
+}
+td:nth-child(3n) button {
+    color: #666666;
+}
+.dashboard td , .dashboard th{
+    padding: 0px 15px;
+    text-align: left;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: #fff; */
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    line-height: 20px;
+    font-size: 18px;
+    color: #814486 !important;
+    opacity: 1;
+    background: transparent !important;
+    margin: 0px 8px 60px 0px!important;
+    /* display: flex !important; */
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: row;
+    background: white !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #814486 !important;
+    color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+    td, td button{
+        font-size: 8px !important;
+    }
+    th{
+        font-size: 10px !important;
+    }
+}
+    
