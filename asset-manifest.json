@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/mirada/static/css/main.947082c7.css",
+    "main.js": "/mirada/static/js/main.91a2022c.js",
+    "static/js/787.28cb0dcd.chunk.js": "/mirada/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Cairo-Regular.ttf": "/mirada/static/media/Cairo-Regular.0dbc695157a638d7cfe1.ttf",
+    "static/media/DMSans-Regular.ttf": "/mirada/static/media/DMSans-Regular.4ee96395e07a04577aab.ttf",
+    "static/media/logo.svg": "/mirada/static/media/logo.2e1c7fee909445c66464e27fc138d0f5.svg",
+    "static/media/service.svg": "/mirada/static/media/service.36ab7a441b6214b6eb79a22b13552df3.svg",
+    "static/media/roomservice.svg": "/mirada/static/media/roomservice.6a213d2fd77694b93164f5b78dcc5abc.svg",
+    "static/media/feedback.svg": "/mirada/static/media/feedback.b3d5f07b8e1256bbb34301a54882cea5.svg",
+    "static/media/checkout.svg": "/mirada/static/media/checkout.4a7616f8d2eed52c18b6f0efd3fe11f9.svg",
+    "static/media/wakeup.svg": "/mirada/static/media/wakeup.cf572800b18fdb959017009ce8151601.svg",
+    "static/media/cleaning.svg": "/mirada/static/media/cleaning.b069516b6ae0d1aa73d882f173ed1438.svg",
+    "static/media/invoice.svg": "/mirada/static/media/invoice.c621262bf38022bbd9075d3f4ad8bd0b.svg",
+    "static/media/dnd.svg": "/mirada/static/media/dnd.6c3fa15321cf8a6d828bfcadb792c9ea.svg",
+    "static/media/laundry.svg": "/mirada/static/media/laundry.fda2299284d807a393419058fd60b578.svg",
+    "index.html": "/mirada/index.html",
+    "static/media/wifi.svg": "/mirada/static/media/wifi.a8e1ba33088c9741d1285e4c51af1bc0.svg",
+    "static/media/back.svg": "/mirada/static/media/back.2eb3e70ecca6c566eaa9e153012020ab.svg",
+    "static/media/details.svg": "/mirada/static/media/details.c4e24b995d0f3e4ae424522aeaa1c6bb.svg",
+    "static/media/error.svg": "/mirada/static/media/error.a9948627e21be45189a1bc050127211e.svg",
+    "static/media/tick.svg": "/mirada/static/media/tick.d1f8bc5dfe9c51bff8b9c17d3b507b1a.svg",
+    "static/media/x.svg": "/mirada/static/media/x.99f3eabca5dd3a7ccf1b0d2960fa732d.svg",
+    "static/media/clock.svg": "/mirada/static/media/clock.6abf2ca6b426c59655202c2c12aeb412.svg",
+    "main.947082c7.css.map": "/mirada/static/css/main.947082c7.css.map",
+    "main.91a2022c.js.map": "/mirada/static/js/main.91a2022c.js.map",
+    "787.28cb0dcd.chunk.js.map": "/mirada/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.947082c7.css",
+    "static/js/main.91a2022c.js"
+  ]
+}
