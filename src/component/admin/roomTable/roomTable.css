@@ -4,10 +4,18 @@
     background: #D5ECF1;
     border-radius: 16px;
     font-family: 'Cairo' !important;
+    flex: 0 0 auto;
+    width: 16.66666667%;
     
 }
 .rooms{
     display: flex;
     justify-content: center;
     align-items: center;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
 }
