@@ -14,6 +14,9 @@ import Switch from "react-switch";
 import TimePopup from "../popup-time/popup-time";
 import FeedbackPopup from "../popup-feedback/popup-feedback";
 import PhonePopup from "../popup-phone/popup-phone";
+import DetailsPopup from "../popup-details/popup-details";
+import DnDPopup from "../popup-dnd/popup-dnd";
+import Header from "../header/header";
 
 const Services = () => {
   // call useHistory for routing
@@ -102,41 +105,55 @@ const Services = () => {
   }
   
   return (
-    <div className="Wrapper">
-        <span style={{marginBottom:'33px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666'}}>Please Make your request</span>
-        <div className="services">
-            {services.map((service, index) => (
-            <button className="service" onClick={openDrawer(index)}>
-                <img src={service.img} alt="" />
-                <div className="service-name">{service.name}</div>
-            </button>
-            ))}
-        </div>
-        
-        { firstPopup >= 0 ?
-            <PhonePopup onClose={closeDrawer(firstPopup)}
-            isVisible={isVisible[firstPopup]}> </PhonePopup>
-            :
-            null
-        }
+    <>
+      <Header></Header>
+      <div className="Wrapper">
+          <span style={{marginBottom:'33px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666'}}>Please Make your request</span>
+          <div className="services">
+              {services.map((service, index) => (
+              <button className="service" onClick={openDrawer(index)}>
+                  <img src={service.img} alt="" />
+                  <div className="service-name">{service.name}</div>
+              </button>
+              ))}
+          </div>
+          
+          { firstPopup === 0 || firstPopup === 2 || firstPopup === 3 || firstPopup === 6 ? 
+              <TimePopup onClose={closeDrawer(firstPopup)} isVisible={isVisible[firstPopup]}> </TimePopup>
+              :
+              firstPopup === 1?
+              <DnDPopup onClose={closeDrawer(firstPopup)} isVisible={isVisible[firstPopup]}> </DnDPopup>
+              :
+              firstPopup === 4?
+              <DetailsPopup onClose={closeDrawer(firstPopup)} isVisible={isVisible[firstPopup]}> </DetailsPopup>
+              :
+              firstPopup === 5?
+              <FeedbackPopup onClose={closeDrawer(firstPopup)} isVisible={isVisible[firstPopup]}> </FeedbackPopup>
+              :
+              firstPopup === 7?
+              <PhonePopup onClose={closeDrawer(firstPopup)} isVisible={isVisible[firstPopup]}> </PhonePopup>
+              :
+              null
+          }
 
-        { secondPopup >= 0 ?
-          <Drawer
-          duration={250}
-          hideScrollbars={true}
-          onClose={closeDrawer(secondPopup)}
-          isVisible={isVisible[secondPopup]}
-          className="drawer"
-          >
-            <div className="drawer0">
-            The service has already been requested, you can check the status of the request on <Link to='/home' style={{textDecoration:'none'}}> my request page </Link>
-            </div>
-          </Drawer>
-        :
-        null
-        }
-        
-    </div>
+          { secondPopup >= 0 ?
+            <Drawer
+            duration={250}
+            hideScrollbars={true}
+            onClose={closeDrawer(secondPopup)}
+            isVisible={isVisible[secondPopup]}
+            className="drawer"
+            >
+              <div className="drawer0">
+              The service has already been requested, you can check the status of the request on <Link to='/home' style={{textDecoration:'none'}}> my request page </Link>
+              </div>
+            </Drawer>
+          :
+          null
+          }
+          
+      </div>
+    </>
   );
 };
 

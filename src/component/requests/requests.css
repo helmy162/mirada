@@ -31,7 +31,7 @@ th:nth-child(3n+2),td:nth-child(3n+2) button,th:nth-child(3n+1),td:nth-child(3n+
 td:nth-child(3n) button{
     color: #D5A62C;
 }
-.completed button{
+.completed, .completed button{
     color: #589F53 !important;
 }
 .table-button{
@@ -52,7 +52,7 @@ td:nth-child(3n) button{
 }
 .closex{
     position: absolute;
-    left: 323px;
+    left: 86vw;
     top: 16px;
 }
 .tick{

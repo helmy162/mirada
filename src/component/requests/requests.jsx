@@ -5,6 +5,7 @@ import x from "../props/x.svg";
 import Success from "../success/success";
 import Error from "../error/error";
 import './requests.css'
+import Header from "../header/header";
 
 
 const Requests = () => {
@@ -68,7 +69,9 @@ const Requests = () => {
 
   
   return (
-    <div className="Wrapper Wrapper-table">
+    <>
+        <Header></Header>
+        <div className="Wrapper Wrapper-table">
         <span style={{marginBottom:'33px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666'}}>Here is your latest requests</span>
         <div className="table">
             <table style={{width:'100%'}}>
@@ -114,7 +117,8 @@ const Requests = () => {
                 ))}
             </table>
         </div>   
-    </div>
+        </div>
+    </>
   );
 };
 

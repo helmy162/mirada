@@ -19,7 +19,7 @@ const Pages = () => {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/reqeusts">
+        <Route path="/requests">
           <Requests />
         </Route>
         <Route path="/services">

@@ -9,6 +9,9 @@
   src: url("../fonts/DMSans-Regular.ttf") format("opentype");
 }
 
+button:hover{
+  cursor: pointer;
+}
 
 .welcome{
   font-family: Cairo;
