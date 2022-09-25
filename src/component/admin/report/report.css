@@ -77,7 +77,7 @@ only screen and (max-width: 850px),
     .MuiButtonBase-root {
         color: #814486 !important;
       }
-      .css-1mtig89-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+      .MuiButtonBase-root:focus{
         color: white !important;
       }
 
