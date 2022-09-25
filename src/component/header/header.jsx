@@ -14,7 +14,7 @@ const Header = () => {
            <button onClick={history.goBack} style={{background:'transparent', border:'none'}}><img className='header-img' src={back} alt="" /> back</button>
         </div>
         <div className='header-col' style={{textAlign:'right'}}>
-        <   button style={{background:'transparent', border:'none', textAlign:'right'}}><img className='header-img' src={world} alt="" />Switch to العربية</button>
+        <   button style={{background:'transparent', border:'none', textAlign:'right'}}><img className='header-img' src={world} alt="" />Switch to عربية</button>
         </div>
     </div>
   );

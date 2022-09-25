@@ -67,9 +67,10 @@
 @media screen and (max-width: 1921px) {
     .box {
         position: relative;
-        width: 42vw;
+        width: 80vw;
         margin: 2.625vw auto;
-        height: 90vw;
+        height: 90vh;
+        min-width: none;
        
         /* min-width: 40vh; */
         background: #fff;
@@ -158,7 +159,7 @@
 @media screen and (max-width: 750px) {
     .close-icon{
         position: fixed;
-        left:  65vw;
+        left:  80vw;
         top: 5vw; 
     }
     .popup-btn{

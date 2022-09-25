@@ -1,72 +1,59 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { stockData } from "./data.js";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
-import Table from "../table/table";
+import ReportTable from "../table/reporttable";
 import Nav from "../Nav/nav";
+import { Pagination } from '@mui/material';
+import usePagination from "./Pagination";
+import './report.css';
+// import { default as data } from "./MOCK_DATA.json";
+
 
 const Report = () => {
-    function useWindowSize() {
-        const [size, setSize] = useState([0, 0]);
-        useLayoutEffect(() => {
-          function updateSize() {
-            setSize([window.innerWidth, window.innerHeight]);
-          }
-          window.addEventListener('resize', updateSize);
-          updateSize();
-          return () => window.removeEventListener('resize', updateSize);
-        }, []);
-        return size;
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
       }
-    const y = useWindowSize()[0];
-    const x = y>=1289? 15: y>891? 10: 5;
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      };
-    const [requests, setRequests] = useState(stockData);
-    const [isVisible, setIsVisible] = useState([false, false, false, false, false, false, false, false]);
-    const [isRemoved, setisRemoved] = useState([false, false, false, false, false, false, false, false])
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+  let [page, setPage] = useState(1);
+  const y = useWindowSize()[0];
+  const PER_PAGE = y>=1920? 16: 10;
+
+  const count = Math.ceil(stockData.length / PER_PAGE);
+  const _DATA = usePagination(stockData, PER_PAGE);
+
+  const handleChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
+  };
+  const [isVisible, setIsVisible] = useState([false, false, false, false, false, false, false, false]);
     const openDrawer = index => e => {
         let newArr = [...isVisible];
         newArr[index] = true;
         setIsVisible(newArr);
       }
+
   return (
-    <>
+    <div className="container">
+      <Nav active="Report"></Nav> 
+      <ReportTable requests={_DATA.currentData()} openDrawer={openDrawer} ></ReportTable>
       
-        <div className="container">
-        <Nav active="Report"></Nav> 
-        <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
-        className="mySwiper"
-      > 
-        <SwiperSlide>
-            <Table requests={requests} openDrawer={openDrawer} start={0} end={x-1}></Table>
-        </SwiperSlide>
-        <SwiperSlide>
-            <Table requests={requests} openDrawer={openDrawer} start={x} end={2*x-1}></Table>
-        </SwiperSlide>
-        <SwiperSlide>
-            <Table requests={requests} openDrawer={openDrawer} start={2*x} end={3*x-1}></Table>
-        </SwiperSlide>
-        <SwiperSlide>
-            <Table requests={requests} openDrawer={openDrawer} start={3*x} end={4*x-1}></Table>
-        </SwiperSlide>
-        <SwiperSlide>
-            <Table requests={requests} openDrawer={openDrawer} start={4*x} end={5*x-1}></Table>
-        </SwiperSlide>
-        <SwiperSlide>
-            <Table requests={requests} openDrawer={openDrawer} start={5*x} end={6*x-1}></Table>
-        </SwiperSlide>
-        </Swiper>
-        </div>
-    </>
+      <Pagination
+        count={count}
+        size="large"
+        page={page}
+        onChange={handleChange}
+        color="secondary"
+        className='pagination'
+        style={{ marginTop: "20px", background:'transparent', color:'white'}}
+      />
+    </div>
   );
 };
 

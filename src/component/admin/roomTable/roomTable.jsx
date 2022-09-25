@@ -1,23 +1,41 @@
 import React, { useState, useRef, useEffect } from "react";
+import basket from "../../props/basket.svg";
+import print from "../../props/print.svg";
 import { Link } from "react-router-dom";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
 import './roomTable.css';
-import bootstrap from 'bootstrap' 
 
-const RoomTable = (props) => { 
+
+const RoomTable = (props) => {
+    
  
   return (
-            <div className="rooms row" style={{width:'100%'}}>
-                <button className="btn-room col-2" style={{background:'#814486'}}>
-                    <div style={{color:'#fff', fontSize:'18px'}}>Create New Room</div>
-                </button>
+            <div className="rooms " style={{width:'100%'}}>
+                <div className="btn-room">
+                    <Link to="/newroom"className="btn-div" style={{textDecoration:'none'}}>
+                        <button style={{background:'#814486'}}>
+                            <div style={{color:'#fff'}}>Create New Room</div>
+                        </button>
+                    </Link>
+                </div>
                 {props.rooms.slice(props.start, props.end).map((room, index) => (
-                            <button className="btn-room col-2">
-                                <div style={{color:'#666', fontSize:'26px'}}>{room.room}</div>
-                                <div style={{color:'#111', fontSize:'16px'}}>{room.name}</div>
+                    <div className="btn-room">
+                        <div className="btn-div">
+                            <button >
+                                <div style={{color:'#666'}}>{room.room}</div>
+                                <div style={{color:'#111'}}>{room.name}</div>
                             </button>
+                        </div>
+                        <div className="btn-div2">
+                            <button >
+                                <img src={basket} alt="" />
+                                <div style={{color:'#fff'}}> Delete</div>
+                            </button>
+                            <button>
+                                <img src={print} alt="" />
+                                <div style={{color:'#fff'}}> Print QR</div>
+                            </button>
+                        </div>
+                    </div>
                 ))}
             </div>
   );

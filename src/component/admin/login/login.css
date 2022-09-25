@@ -19,8 +19,8 @@
 .btn-login{
     background-color: rgb(129, 68, 134);
     border-radius: 999px;
-    width: 380px;
-    height: 60px;
+    width: 330px;
+    height: 36px;
     border: none;
     margin-bottom: 16px;
     color: white;
@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    padding: 12px 25px;
 }
 .form-input{
     background-color: white;
@@ -50,4 +51,15 @@
 .form-input:focus, .form-input:active, .form-input:focus-visible{
     border: 1px solid #814486;
     outline: none;
+}
+@media screen and (max-width: 420px) {
+    .form-input{
+        width: 75vw;
+    }
+    .btn-login{
+        width: 75vw;
+    }
+    .logo{
+        width: 75vw;
+    }
 }

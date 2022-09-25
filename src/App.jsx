@@ -14,6 +14,7 @@ import Dashboard from "./component/admin/dashboard/dashboard";
 import Report from "./component/admin/report/report";
 import roomTable from "./component/admin/roomTable/roomTable";
 import Rooms from "./component/admin/rooms/rooms";
+import NewRoom from "./component/admin/newroom/newroom";
 
 const Pages = () => {
   const location = useLocation();
@@ -41,6 +42,9 @@ const Pages = () => {
         </Route>
         <Route path="/roomsetup">
           <Rooms/>
+        </Route>
+        <Route path="/newroom">
+          <NewRoom/>
         </Route>
         <Redirect to="/login" />
       </Switch>

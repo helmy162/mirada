@@ -1,0 +1,48 @@
+.wrapper2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 100px;
+    border-radius: 16px;
+    background-color: white;
+}
+.container3{
+    background: #1A0E1B;
+    width: 100vw;
+    height: fit-content;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    max-width: 100vw;
+    min-width: 500px;
+}
+.addnewroom{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 115%;
+    color: #111111;
+    margin-bottom: 48px;
+}
+
+@media screen and (max-width: 420px) {
+    .form-input{
+        width: 75vw;
+    }
+    .btn-login{
+        width: 75vw;
+    }
+    .logo{
+        width: 75vw;
+    }
+}

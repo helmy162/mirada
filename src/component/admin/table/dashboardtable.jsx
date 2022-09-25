@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
-const Table = (props) => { 
+const DashboardTable = (props) => { 
  
   return (
-            <table className="dashboard" style={{width:'80vw'}}>
+            <table className="dashboard2" style={{width:'80vw'}}>
                 <tr style={{background:'#814486'}}>
                     <th>Date and Time request</th>
                     <th>Room No.</th>
@@ -26,18 +26,18 @@ const Table = (props) => {
                     <th>Comments </th>
                     <th>Hotel Action</th>
                 </tr>
-                {props.requests.slice(props.start, props.end).map((request, index) => (
+                {props.requests.map((request, index) => (
                             <tr>
                                 <td>{request.date} {request.time}</td>
                                 <td>{request.room}</td>
                                 <td>{request.name}</td>
                                 <td>{request.timeservice}</td>
                                 <td>{request.details}</td>
-                                <td><button onClick={props.openDrawer(index)}>{request.status}</button></td>
+                                <td><button onClick={props.openDrawer()}>{request.status}</button></td>
                             </tr>
                 ))}
             </table>
   );
 };
 
-export default Table;
+export default DashboardTable;

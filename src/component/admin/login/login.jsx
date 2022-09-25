@@ -13,7 +13,7 @@ const Login = () => {
     <>
       <Header></Header>
       <div className="Wrapper"> 
-        <img src={logo} alt="" style={{marginBottom:'90px'}}/>
+        <img src={logo} className="logo" alt="" style={{marginBottom:'90px'}}/>
                                     {/* Uncomment if there is invalid input */}
         {/* <span style={{marginBottom:'40px', color:'#EB5757', marginTop:'-20px', fontSize:'18px'}}>Login or password is incorrect</span> */}
         <form action="">

@@ -10,9 +10,9 @@ const Nav = (props) => {
     return (
             <div className="nav">
                 <div className="leftnav">
-                    <Link to="/dashboard" style={{textDecoration:'none'}}><div className={props.active==="Dashboard"?"nav-item active":"nav-item"}>Dashboard Page</div></Link>
-                    <Link to="/report" style={{textDecoration:'none'}}><div className={props.active==="Report"?"nav-item active":"nav-item"}>Report Page</div></Link>
-                    <Link to="/roomsetup" style={{textDecoration:'none'}}><div className={props.active==="Room"?"nav-item active":"nav-item"}>Room Setup Page</div></Link>
+                    <Link to="/dashboard" style={{textDecoration:'none'}}><div className={props.active==="Dashboard"?"nav-item active":"nav-item"}>Dashboard</div></Link>
+                    <Link to="/report" style={{textDecoration:'none'}}><div className={props.active==="Report"?"nav-item active":"nav-item"}>Report</div></Link>
+                    <Link to="/roomsetup" style={{textDecoration:'none'}}><div className={props.active==="Room"?"nav-item active":"nav-item"}>Room Setup</div></Link>
                 </div>
                 <div className="rightnav">
                     <button className="nav-item add-service" onClick={() => setIsPopupOpen(true)}>Add Service</button>

@@ -1,23 +1,36 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { stockData } from "./data.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
 import roomTable from "../roomTable/roomTable";
 import Nav from "../Nav/nav";
 import RoomTable from '../roomTable/roomTable';
+import { Pagination } from '@mui/material';
+import usePagination from "./Pagination";
 
 const Rooms = () => {
-    const x = 25;
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      };
-    const [rooms, setRooms] = useState(stockData);
-    const [isVisible, setIsVisible] = useState([false, false, false, false, false, false, false, false]);
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+  let [page, setPage] = useState(1);
+  const y = useWindowSize()[0];
+  const PER_PAGE = y>=1920? 24: 19;
+  const count = Math.ceil(stockData.length / PER_PAGE);
+  const _DATA = usePagination(stockData, PER_PAGE);
+
+  const handleChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
+  };
+  const [isVisible, setIsVisible] = useState([false, false, false, false, false, false, false, false]);
     const openDrawer = index => e => {
         let newArr = [...isVisible];
         newArr[index] = true;
@@ -27,31 +40,17 @@ const Rooms = () => {
     <>
       
         <div className="container">
-        <Nav active="Room"></Nav> 
-        <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
-        className="mySwiper"
-      > 
-        <SwiperSlide>
-            <RoomTable rooms={rooms} openDrawer={openDrawer} start={0} end={x-1}></RoomTable>
-        </SwiperSlide>
-        <SwiperSlide>
-            <RoomTable rooms={rooms} openDrawer={openDrawer} start={x} end={2*x-1}></RoomTable>
-        </SwiperSlide>
-        <SwiperSlide>
-            <RoomTable rooms={rooms} openDrawer={openDrawer} start={2*x} end={3*x-1}></RoomTable>
-        </SwiperSlide>
-        <SwiperSlide>
-            <RoomTable rooms={rooms} openDrawer={openDrawer} start={3*x} end={4*x-1}></RoomTable>
-        </SwiperSlide>
-        <SwiperSlide>
-            <RoomTable rooms={rooms} openDrawer={openDrawer} start={4*x} end={5*x-1}></RoomTable>
-        </SwiperSlide>
-        <SwiperSlide>
-            <RoomTable rooms={rooms} openDrawer={openDrawer} start={5*x} end={6*x-1}></RoomTable>
-        </SwiperSlide>
-        </Swiper>
+          <Nav active="Room"></Nav>
+          <RoomTable rooms={_DATA.currentData()} openDrawer={openDrawer} ></RoomTable>
+          <Pagination
+          count={count}
+          size="large"
+          page={page}
+          onChange={handleChange}
+          color="secondary"
+          className='pagination'
+          style={{ marginTop: "20px", background:'transparent', color:'white'}}
+          />
         </div>
     </>
   );

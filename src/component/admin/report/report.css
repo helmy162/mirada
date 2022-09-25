@@ -2,7 +2,7 @@
 /* 
 Generic Styling, for Desktops/Laptops 
 */
-.container2{
+.container{
     background: #1A0E1B;
     width: 100vw;
     height: 100vh;
@@ -19,7 +19,7 @@ Generic Styling, for Desktops/Laptops
     overflow: hidden;
     max-width: 100vw;
 }
-.container2 td:nth-child(3n) button {
+.container td:nth-child(3n) button {
     color: #666666 ;
 }
 table { 
@@ -63,65 +63,12 @@ table {
   .MuiButtonBase-root {
     color: white !important;
   }
-  .radio{
-    color: #666 !important;
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .radio input{
-    margin-right: 8px;
-    margin-left: 48px;
-    width: 24px;
-    height: 24px;
-  }
-  .radio .flex:nth-child(1) input{
-    accent-color: #666666;
-  }
-  .radio .flex:nth-child(1) input:checked + label{
-    color: #666666;
-  }
-  .radio .flex:nth-child(2) input{
-    accent-color: #814486;
-  }
-  .radio .flex:nth-child(2) input:checked + label{
-    color: #814486;
-  }
-  .radio .flex:nth-child(3) input{
-    accent-color: #589F53;
-  }
-  .radio .flex:nth-child(3) input:checked + label{
-    color: #589F53;
-  }
-  .radiopopup{
-    font-family: 'Cairo';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    color: #111;
-  }
-  .popupcomment{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .flex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
 @media 
 only screen and (max-width: 850px),
 (min-device-width: 768px) and (max-device-width: 850px)  {
-    .radio{
-      flex-direction: column;
-      align-items: start;
-    }
-    .container2{
+
+    .container{
         height: fit-content;
     }
     table{
@@ -146,7 +93,7 @@ only screen and (max-width: 850px),
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #ccc;}
+	tr { border: 2px solid #1A0E1B;}
 	
 	td { 
 		/* Behave  like a "row" */
@@ -173,10 +120,13 @@ only screen and (max-width: 850px),
 	/*
 	Label the data
 	*/
-	.container2 td:nth-of-type(1):before { content: "Date and Time request"; color: #814486;}
-	.container2 td:nth-of-type(2):before { content: "Room No."; COLOR: #814486;}
-	.container2 td:nth-of-type(3):before { content: "Service Type"; COLOR: #814486;}
-	.container2 td:nth-of-type(4):before { content: "Time of service"; COLOR: #814486;}
-	.container2 td:nth-of-type(5):before { content: "Comments"; COLOR: #814486;}
-	.container2 td:nth-of-type(6):before { content: "Hotel Action"; COLOR: #814486;}
+	.container td:nth-of-type(1):before { content: "Date and Time request"; color: #814486;}
+	.container td:nth-of-type(2):before { content: "Room No."; COLOR: #814486;}
+	.container td:nth-of-type(3):before { content: "Service Type"; COLOR: #814486;}
+	.container td:nth-of-type(4):before { content: "Time of service"; COLOR: #814486;}
+	.container td:nth-of-type(5):before { content: "Comments"; COLOR: #814486;}
+	.container td:nth-of-type(6):before { content: "Completed Time"; COLOR: #814486;}
+    .container td:nth-of-type(7):before { content: "Hotel Comments"; COLOR: #814486;}
+    
+    
 }
