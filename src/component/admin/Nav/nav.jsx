@@ -62,7 +62,7 @@ const Nav = (props) => {
                 <Link to="/roomsetup">Room Setup Page</Link>
                 </li>
                 <li>
-                  <button> Add Service</button>
+                  <button onClick={() => setIsPopupOpen(true)} > Add Service</button>
                 </li>
                 <li>
                   <a href="">Logout</a>
@@ -71,6 +71,17 @@ const Nav = (props) => {
             </Menu>
           }
         />
+        {IsPopupOpen && (
+                <Popup
+                  noclose= {false}
+                  content={
+                    <>
+                      <Services nonav={true}></Services>
+                    </>
+                  }
+                  handleClose={e => setIsPopupOpen(!IsPopupOpen)}
+                />
+              )}
       </div>
     );
   };
