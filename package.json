@@ -24,6 +24,8 @@
     "react-scripts": "^5.0.1",
     "react-sheet-slide": "^1.2.1",
     "react-switch": "^7.0.0",
+    "react-time-input": "^1.0.1",
+    "react-time-picker-input": "^2.0.10",
     "styled-components": "^5.3.5",
     "swiper": "^8.4.2",
     "web-vitals": "^2.1.4"

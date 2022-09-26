@@ -13,8 +13,8 @@ const Home = () => {
   
   return (
     <>
-      <Header></Header>
-      <div className="Wrapper"> 
+      {/* <Header></Header> */}
+      <div className="Wrapper login"> 
         <img src={logo} alt="" />
         <div className="welcome">
           Welcome to <span style={{color:'#814486'}}> Mirada Hotel</span>

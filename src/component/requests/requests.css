@@ -1,5 +1,6 @@
 .Wrapper-table{
     justify-content: start;
+    padding: 0px 20px;
 }
 table, th, td {
     border-collapse: collapse;
@@ -84,4 +85,31 @@ td:nth-child(3n) button{
 }
 .btn-lined:disabled{
     opacity: 0.5 !important;
+}
+@media 
+only screen and (max-width: 850px),
+(min-device-width: 768px) and (max-device-width: 850px)  {
+    .Wrapper td:nth-of-type(1):before { content: "Date"; color: #814486;}
+    .Wrapper td:nth-of-type(2):before { content: "Request"; COLOR: #814486;}
+    .Wrapper td:nth-of-type(3):before { content: "Status"; COLOR: #814486;}
+    .table table{
+        background-color: transparent;
+    }
+    .Wrapper tr {
+        border: 2px solid #814486;
+        margin: 0px 0px 10px 0px;
+    }
+    .Wrapper .table {
+        width: 80% !important;
+    }
+    
+    .Wrapper td:nth-child(1), .Wrapper th:nth-child(1) {
+        padding-left: 30% !important;
+    }
+    .Wrapper td{
+        padding-left: 30% !important;
+    }
+    .Wrapper td button{
+        padding-left: 0px !important;
+    }
 }
