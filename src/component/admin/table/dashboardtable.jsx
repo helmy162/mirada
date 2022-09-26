@@ -15,12 +15,12 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const DashboardTable = (props) => { 
- 
+
   return (
             <table className="dashboard2" style={{width:'80vw'}}>
                 <tr style={{background:'#814486'}}>
-                    <th>Date and Time request</th>
-                    <th>Room No.</th>
+                    <th className="headerSortDown">Date and Time request</th>
+                    <th className="headerSortUp">Room No.</th>
                     <th>Service Type</th>
                     <th>Time of service </th>
                     <th>Comments </th>
@@ -33,7 +33,14 @@ const DashboardTable = (props) => {
                                 <td>{request.name}</td>
                                 <td>{request.timeservice}</td>
                                 <td>{request.details}</td>
-                                <td><button onClick={props.openDrawer()}>{request.status}</button></td>
+                                <td><select name="" id="" style={{background:'transparent', border:'none'}} onChange={(e) => e.target.value === "Couldn't Serve" ? props.openDrawer() : null}>
+                                    <option value="Pending" selected={request.status==="Pending"}>Pending</option>
+                                    <option value="In-Process" selected={request.status==="In-Process"}>In-Process</option>
+                                    <option value="Done" selected={request.status==="Complete"}>Complete</option>
+                                    <option value="Couldn't Serve" >Couldn't Serve</option>
+                                    </select>
+                                </td>
+                                
                             </tr>
                 ))}
             </table>

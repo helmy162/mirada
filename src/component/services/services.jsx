@@ -78,6 +78,7 @@ const Services = (props) => {
       opened: false,
       status: "inactive",
     },
+    
   ]);
   const [isVisible, setIsVisible] = useState([false, false, false, false, false, false, false, false]);
   
@@ -107,8 +108,19 @@ const Services = (props) => {
   
   return (
     <>
-      {props.nav?<Header></Header>: null}
+      {props.nonav? null : <Header></Header>}
       <div className="Wrapper">
+        {props.room? 
+        <>
+        <label htmlFor="room" style={{ fontFamily: 'Cairo', fontSize: '18px', color:'#666666', marginTop:'50px'}}>Select Room No.</label>
+          <input type="text" name="room" id="room" list="rooms" style={{width:'fit-content', height:'25px', textAlign:'center', fontSize:'16px', marginBottom:'20px'}}/>
+            <datalist id="rooms" >
+            {services.map((service, index) => (
+                <option value={service.id}/>
+                ))}
+            </datalist>
+        </>
+        : null}
           <span style={{marginBottom:'33px', fontFamily: 'Cairo', fontSize: '18px', color:'#666666'}}>Please Make your request</span>
           <div className="services">
               {services.map((service, index) => (

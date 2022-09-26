@@ -76,7 +76,8 @@ const Nav = (props) => {
                   noclose= {false}
                   content={
                     <>
-                      <Services nonav={true}></Services>
+                      <Services nonav={true} room={true}></Services>
+                      <div style={{height:'100px'}}></div>
                     </>
                   }
                   handleClose={e => setIsPopupOpen(!IsPopupOpen)}

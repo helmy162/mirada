@@ -101,6 +101,10 @@ table {
     font-size: 18px;
     line-height: 26px;
     color: #111;
+    justify-content: start !important;
+    position: relative;
+    top: 100px;
+    min-height: 100px !important;
   }
   .popupcomment{
     display: flex;
@@ -117,6 +121,13 @@ table {
 @media 
 only screen and (max-width: 850px),
 (min-device-width: 768px) and (max-device-width: 850px)  {
+  .filter{
+    top:0px !important;
+    margin-bottom: 20px;
+  }
+  .filterfield{
+    width: fit-content !important;
+  }
     .radio{
       flex-direction: column;
       align-items: start;
@@ -179,4 +190,22 @@ only screen and (max-width: 850px),
 	.container2 td:nth-of-type(4):before { content: "Time of service"; COLOR: #814486;}
 	.container2 td:nth-of-type(5):before { content: "Comments"; COLOR: #814486;}
 	.container2 td:nth-of-type(6):before { content: "Hotel Action"; COLOR: #814486;}
+}
+
+.headerSortDown:before,
+.headerSortUp::before {
+  content: ' ';
+  position: relative;
+  left: -10px;
+  border: 8px solid transparent;
+}
+
+.headerSortDown:before {
+  top: 20px;
+  border-top-color: silver;
+}
+
+.headerSortUp:before {
+  bottom: 20px;
+  border-bottom-color: silver;
 }
