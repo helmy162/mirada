@@ -1,3 +1,37 @@
+/* <select> styles */
+.filter select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  color: white;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+  /* <option> colors */
+  .filter option {
+    color: inherit;
+    background-color: rgba(129, 68, 134, 0.8);
+  }
+  /* Remove focus outline */
+  .filter option:focus {
+    outline: none;
+  }
+  /* Remove IE arrow */
+  .filter option::-ms-expand {
+    display: none;
+  }
+
+
 .filter{
     width: 100%;
     position: relative;
@@ -18,8 +52,8 @@
 }
 .filtered{
     background-color: white;
-    padding: 0px 10px;
-    border-radius: 16px;
+    padding: 5px 10px;
+    border-radius: 0.5em;
     color: #814486;
     margin-left: 20px;
     margin-bottom: 10px;
@@ -29,4 +63,5 @@
     background: transparent;
     border: none;
     color: black;
+    margin-left: 10px;
 }

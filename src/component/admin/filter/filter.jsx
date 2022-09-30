@@ -33,7 +33,7 @@ const Filter = () => {
   return (
     <>
         <div className='filter' id='filter'>
-            <select className="filterfield" name="" id="" style={{background:'white', border:'none'}} onChange={(e) => filterData(e.target.value)}>
+            <select className="filterfield" name="" id="" style={{}} onChange={(e) => filterData(e.target.value)}>
                 <option value="Select a service" selected  disabled>Select a service</option>
                 <option value="Cleaning service">Cleaning service</option>
                 <option value="DND">Do not Disturb</option>
@@ -44,7 +44,7 @@ const Filter = () => {
             </select>
         </div>
         <div className='filter' id='filter2'>
-            <select className="filterfield" name="" id="" style={{background:'white', border:'none'}} onChange={(e) => filterData2(e.target.value)}>
+            <select className="filterfield" name="" id="" style={{}} onChange={(e) => filterData2(e.target.value)}>
                 <option value="Select a status" selected  disabled>Select a status</option>
                 <option value="Pending">Pending</option>
                 <option value="In-Process" >In-Process</option>

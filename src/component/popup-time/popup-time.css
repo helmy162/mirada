@@ -16,6 +16,7 @@ input[type=time] {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   
   /* The space between the fields - between hour and minute, the minute and 
@@ -67,6 +68,7 @@ input[type=time] {
     display: none;
   }
   input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
     position: relative;
     left: -30px;
   }

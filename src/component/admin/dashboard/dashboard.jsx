@@ -25,7 +25,7 @@ const Report = () => {
   }
   let [page, setPage] = useState(1);
   const y = useWindowSize()[0];
-  const PER_PAGE = y>=1920? 15: y>800? 10: 7;
+  const PER_PAGE = y>=1920? 14: y>800? 10: 7;
 
   const count = Math.ceil(stockData.length / PER_PAGE);
   const _DATA = usePagination(stockData, PER_PAGE);

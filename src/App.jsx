@@ -46,7 +46,7 @@ const Pages = () => {
         <Route path="/newroom">
           <NewRoom/>
         </Route>
-        <Redirect to="/home" />
+        <Redirect to="/login" />
       </Switch>
     </>
   );
